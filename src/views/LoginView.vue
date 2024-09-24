@@ -1,14 +1,14 @@
 <script setup>
-import { ref } from "vue";
-import { $apiPost } from "@/utils/api";
+import { ref } from 'vue'
+import { $apiPost } from '@/utils/api'
 
-const testText = ref("아직 로그인 전");
+const testText = ref('아직 로그인 전')
 
 const login = async () => {
-  await $apiPost("/user/login")
-    .then((res) => (testText.value = `로그인 ${res.message}`))
-    .catch((err) => (testText.value = err));
-};
+  await $apiPost('/user/login')
+    .then(res => (testText.value = `로그인 ${res.message}`))
+    .catch(err => (testText.value = err))
+}
 </script>
 
 <template>
