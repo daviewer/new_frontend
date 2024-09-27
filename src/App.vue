@@ -1,11 +1,15 @@
-<script setup>
-import LoginView from '@/views/LoginView.vue'
-</script>
+<script setup></script>
 
 <template>
   <VApp>
     <VMain>
-      <LoginView />
+      <RouterView />
     </VMain>
   </VApp>
 </template>
+
+<style>
+.v-main {
+  background-color: #4a148c;
+}
+</style>
