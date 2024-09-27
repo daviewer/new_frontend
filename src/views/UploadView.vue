@@ -1,13 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import LoadingDialog from '@/components/LoadingDialog.vue'
-import { useRouter } from 'vue-router'
 
 const isLoadingVisible = ref(false)
-const router = useRouter()
 const showLoading = () => {
   isLoadingVisible.value = false
-  router.push('/login')
 }
 </script>
 <template>
