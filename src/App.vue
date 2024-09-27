@@ -7,3 +7,9 @@
     </VMain>
   </VApp>
 </template>
+
+<style>
+.v-main {
+  background-color: #4a148c;
+}
+</style>

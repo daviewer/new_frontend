@@ -3,9 +3,6 @@ import { ref } from 'vue'
 import LoadingDialog from '@/components/LoadingDialog.vue'
 
 const isLoadingVisible = ref(false)
-const showLoading = () => {
-  isLoadingVisible.value = false
-}
 </script>
 <template>
   <div class="btn-header">
@@ -19,18 +16,16 @@ const showLoading = () => {
     </p>
   </div>
   <div class="container">
-    <div class="source-container">
-      <div class="icon source-icon"></div>
-      <select id="sourceBranch"></select>
-    </div>
-    <br />
-    <div class="target-container">
-      <div class="icon target-icon"></div>
-      <select id="targetBranch"></select>
-    </div>
-    <div class="button-container">
-      <button id="runReview" class="btn-review" @click="showLoading"></button>
-    </div>
+    <VCol>
+      <VSelect label="개발 브랜치" />
+    </VCol>
+    <VCol>
+      <VSelect label="비교 브랜치" />
+    </VCol>
+    <VCol>
+      <VFileInput type="file" webkitdirectory label="폴더 업로드" />
+    </VCol>
+    <VBtn>비교 분석</VBtn>
   </div>
   <LoadingDialog v-model:is-visible="isLoadingVisible" />
 </template>
